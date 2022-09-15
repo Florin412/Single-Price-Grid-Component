@@ -1,0 +1,102 @@
+@use "variables" as *;
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(auto, 320px));
+  box-shadow: 0px 10px 20px 0px $grayish-blue;
+  border-radius: 3%; // this line allows us to have the border arround the container even if we have a box-shadow on
+  margin: 4.5rem 2rem;
+
+  .section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2.5rem;
+  }
+
+  .join-community-section {
+    grid-column: 1 / -1;
+    background-color: $white;
+    border-radius: $radius $radius 0 0;
+
+    .title {
+      color: $cyan;
+    }
+
+    .subtitle {
+      color: $bright-yellow;
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+
+    .description {
+      color: $grayish-blue;
+      line-height: 1.6;
+      margin-top: -0.8rem;
+    }
+  }
+
+  .monthly-subscription-section {
+    background-color: $cyan;
+    border-radius: 0 0 0 $radius;
+    color: $light-gray;
+
+    .title {
+      font-size: 1rem;
+    }
+
+    .description {
+      margin-top: -1rem;
+    }
+
+    .price {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-size: 2rem;
+      font-weight: 700;
+
+      span {
+        font-size: 0.9rem;
+        opacity: 0.8;
+        font-weight: 400;
+      }
+    }
+
+    .sign-up-btn {
+      border: none;
+      outline: none;
+      font-size: inherit;
+      font-family: inherit;
+      color: $white;
+      background-color: $bright-yellow;
+      padding: 0.9rem;
+      border-radius: calc($radius - 0.2rem);
+      cursor: pointer;
+      box-shadow: 0px 10px 20px 0px $dark-cyan;
+
+      &:hover,
+      &:focus {
+        background-color: $dark-yellow;
+        transition: 0.4s;
+      }
+    }
+  }
+
+  .why-us-section {
+    background-color: $light-cyan;
+    border-radius: 0 0 $radius 0;
+    color: $light-gray;
+
+    .title {
+      font-size: 1.15rem;
+    }
+
+    .description {
+      margin-top: -0.3rem;
+      line-height: 1.5;
+      font-size: 0.85rem;
+      max-width: 72%;
+    }
+  }
+}
