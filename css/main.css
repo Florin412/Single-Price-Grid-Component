@@ -80,10 +80,12 @@
   border-radius: 0.3rem;
   cursor: pointer;
   box-shadow: 0px 10px 20px 0px hsl(179deg, 62%, 33%);
+  transition: all 0.1s linear;
 }
 .container .monthly-subscription-section .sign-up-btn:hover, .container .monthly-subscription-section .sign-up-btn:focus {
   background-color: hsl(71deg, 73%, 44%);
   transition: 0.4s;
+  scale: 1.05;
 }
 .container .why-us-section {
   background-color: hsl(179deg, 47%, 52%);
